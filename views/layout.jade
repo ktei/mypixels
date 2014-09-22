@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/app.css')
+    if settings.env == 'development'
+      script(src='/bower_components/requirejs/require.js')
+      script(src='/javascripts/main.js')
+    else
+      script(src='/javascripts/app.js')
+  body
+    .uk-container.uk-container-center.uk-margin-top.uk-margin-large-bottom
+      .uk-navbar.uk-margin-large-bottom
+        a.uk-navbar-brand.uk-hidden-small(href="/") mypixels
+        ul.uk-navbar-nav.uk-hidden-small
+          li
+            a(href="#1") Frontpage
+          li
+            a(href="#1") Portfolio
+        a.uk-navbar-toggle.uk-visible-small(href="#offcanvas", data-uk-offcanvas)
+        .uk-navbar-brand.uk-navbar-center.uk-visible-small mypixels
+      block content
+      .uk-offcanvas(id="offcanvas")
+        .uk-offcanvas-bar
+          .uk-nav.uk-nav-offcanvas
+            li
+              a(href="#1") Frontpage                    
+            li
+              a(href="#1") Portfolio

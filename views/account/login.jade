@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  #ui
+  script.
+    require(['jsx!components/login'], function (login) {
+      login(document.getElementById('ui'));
+    });
