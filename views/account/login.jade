@@ -3,6 +3,6 @@ extends ../layout
 block content
   #ui
   script.
-    require(['jsx!components/login'], function (login) {
-      login(document.getElementById('ui'));
+    require(['jsx!components/login'], function (Login) {
+      Login.mount(document.getElementById('ui'));
     });

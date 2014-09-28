@@ -1,2 +1,22 @@
 @import "./bower_components/uikit/themes/default/gradient/uikit.less";
 
+@import "./public/stylesheets/less/spinner.less";
+
+label {
+  &.error, &.success {
+    display: block;
+    color: #fff;
+    margin-top: 2px;
+    border-radius: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+  }
+
+  &.error {
+    background-color: @alert-danger-color;
+  }
+  &.success {
+    background-color: @alert-success-color;
+  }
+}

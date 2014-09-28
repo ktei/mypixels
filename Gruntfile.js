@@ -16,7 +16,7 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: {
-          "./public/stylesheets/app.css": "./public/stylesheets/less/app.less"
+          "./public/stylesheets/app.css": "./public/stylesheets/less/*.less"
         }
       }
     },
