@@ -1,4 +1,5 @@
 var express = require('express');
+var flash = require('express-flash');
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
@@ -31,6 +32,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(session({secret: 'km5jpVEi', saveUninitialized: true, resave: true}));
+app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
 app.use('/public', express.static(path.join(__dirname, 'public')));

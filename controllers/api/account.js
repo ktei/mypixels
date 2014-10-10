@@ -3,10 +3,6 @@ var router = express.Router();
 var passport = require('passport');
 var User = require('../../models/user');
 
-router.post('/login', passport.authenticate('local'), function (req, res) {
-  res.json({success: true});
-});
-
 router.post('/register', function (req, res) {
   User.register(new User({ username: req.body.username, email: req.body.email }), 
     req.body.password, function(err, user) {
