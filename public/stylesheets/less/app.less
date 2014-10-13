@@ -1,6 +1,17 @@
 @import "./bower_components/uikit/themes/default/gradient/uikit.less";
 
+@import "./public/stylesheets/less/utility.less";
 @import "./public/stylesheets/less/spinner.less";
+@import "./public/stylesheets/less/photos.less";
+
+html {
+  background: #e0e1e2;
+}
+
+.wrapper {
+  .uk-container(); 
+  .uk-container-center(); 
+}
 
 label {
   &.error, &.success {
@@ -20,3 +31,4 @@ label {
     background-color: @alert-success-color;
   }
 }
+

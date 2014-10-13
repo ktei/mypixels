@@ -1,7 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p #{settings.env}
   #container
+    .photos
+      .photo
+        .user
+          .avatar
+            img(src="http://photos-e.ak.instagram.com/hphotos-ak-xfa1/10693340_726034507431988_1698037052_a.jpg")
+          .meta
+            .name ktei
+            time 12 hours ago
+        .uk-thumbnail-expand
+          img(src="http://photos-a.ak.instagram.com/hphotos-ak-xaf1/10727617_1539262376290800_634049131_n.jpg")
+
+        .detail
+          .text This is really a cute dog! lol!!~~~
+          .section.action-bar
+            a.btn-like(href="#")
+            a.btn-more(href="#")
+          .section awegaweg2

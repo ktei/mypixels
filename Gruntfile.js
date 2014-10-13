@@ -7,7 +7,7 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          "./public/stylesheets/app.css": "./public/stylesheets/less/app.less"
+          "./public/stylesheets/app.css": './public/stylesheets/less/*.less'
         }
       },
       production: {

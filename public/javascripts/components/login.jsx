@@ -20,7 +20,7 @@ define(['jquery', 'react', 'routes', 'jquery-validation'], function ($, React, R
     },
     render: function() {
       return (
-        <form className="uk-panel uk-panel-box uk-form" style={{'width': '250px'}} ref="form" method="POST">
+        <form className="uk-panel uk-panel-box uk-form shadow-box" style={{'width': '250px'}} ref="form" method="POST">
           <div className="uk-form-row">
             <div className="uk-form-icon uk-width-1-1">
               <i className="uk-icon-user"></i>

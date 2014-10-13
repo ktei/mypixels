@@ -107,7 +107,7 @@ define(['jquery', 'react', 'routes', 'jsx!components/spinner', 'utils', 'jquery-
           <div className="uk-vertical-align-middle">
             {this.state.busy ? <Spinner /> : null}
             {this.state.error ? <div className="uk-alert uk-alert-danger">{this.state.error}</div> : null}
-            <form className="uk-panel uk-panel-box uk-form" onSubmit={this.handleSubmit} ref="form" style={{'width': '250px'}}>
+            <form className="uk-panel uk-panel-box uk-form shadow-box" onSubmit={this.handleSubmit} ref="form" style={{'width': '250px'}}>
               <div className="uk-form-row">
                 <div className="uk-form-icon uk-width-1-1">
                   <i className="uk-icon-user"></i>

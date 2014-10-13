@@ -1,0 +1,23 @@
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+.shadow-box {
+  background: #fafafa;
+  border: 1px solid silver;
+  .box-shadow(0 1px 16px rgba(0,0,0,.1)); 
+}
