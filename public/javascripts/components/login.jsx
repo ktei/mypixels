@@ -1,4 +1,4 @@
-define(['jquery', 'react', 'routes', 'jquery-validation'], function ($, React, Routes) {
+define(['jquery', 'react', 'jquery-validation'], function ($, React) {
   var Component = React.createClass({
     getInitialState: function() {
       return {};
@@ -38,7 +38,7 @@ define(['jquery', 'react', 'routes', 'jquery-validation'], function ($, React, R
           </div>
           <div className="uk-form-row uk-text-small">
             <label className="uk-float-left">No account yet?</label>
-            <a className="uk-float-right uk-link uk-link-muted" href={Routes.register}>Sign Up</a>
+            <a className="uk-float-right uk-link uk-link-muted" href="/account/register">Sign Up</a>
           </div>
         </form>
       );

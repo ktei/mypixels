@@ -1,4 +1,4 @@
-define(['jquery', 'react', 'routes', 'jsx!components/spinner', 'utils', 'jquery-validation', 'jquery-validation-addons'], function ($, React, Routes, Spinner, Utils) {
+define(['jquery', 'react', 'jsx!components/spinner', 'utils', 'jquery-validation', 'jquery-validation-addons'], function ($, React, Spinner, Utils) {
   var Component = React.createClass({
     mixins: [React.addons.LinkedStateMixin],
 
@@ -21,11 +21,11 @@ define(['jquery', 'react', 'routes', 'jsx!components/spinner', 'utils', 'jquery-
               required: true,
               minlength: 4,
               alphanumeric: true,
-              remote: Routes.api.check_username
+              remote: '/api/account/check_username'
             },
             email: {
               required: true,
-              remote: Routes.api.check_email
+              remote: '/api/account/check_email'
             },
             password: {
               required: true,
@@ -87,9 +87,9 @@ define(['jquery', 'react', 'routes', 'jsx!components/spinner', 'utils', 'jquery-
       this.setState({busy: true});
       this.disableForm(true);
       self.setState({error: ''});
-      $.post(Routes.api.register, this.state).success(function (result) {
+      $.post('/api/account/register', this.state).success(function (result) {
         if (result.success === true) {
-          Utils.redirect(Routes.home);
+          Utils.redirect('/');
         } else {
           self.handleError(result.error.message);
         }
@@ -130,7 +130,7 @@ define(['jquery', 'react', 'routes', 'jsx!components/spinner', 'utils', 'jquery-
                 <button type="submit" className="uk-width-1-1 uk-button uk-button-primary uk-button-large">Sign Up</button>
               </div>
               <div className="uk-form-row uk-text-small">
-                <a className="uk-float-right uk-link uk-link-muted" href={Routes.login}>Log In</a>
+                <a className="uk-float-right uk-link uk-link-muted" href='/account/login'>Log In</a>
               </div>
             </form>
           </div>

@@ -1,4 +1,5 @@
 @import (reference) "./bower_components/uikit/themes/default/gradient/uikit.less";
+@import (reference) "./public/stylesheets/less/variables.less";
 @import (reference) "./public/stylesheets/less/utility.less";
 
 .photos {
@@ -10,15 +11,13 @@
     .uk-panel-box-secondary();
     margin-bottom: 30px;
     position: relative;
-    max-width: 540px;
+    max-width: @photo-width;
     padding: 5px;
     .shadow-box();
 
     .user {
-      max-width: 540px;
-      // border: 1px solid #ccc;
+      max-width: @photo-width;
       border-bottom: 0;
-      background-color: white;
       .clearfix();
       a {
         position: relative;
@@ -26,8 +25,8 @@
       }
       .avatar {
         img {
-          width: 48px;
-          height: 48px;
+          width: @photo-avatar-width;
+          height: @photo-avatar-height;
         }
         position:relative;
         margin: 0px 10px 5px 0px;
@@ -50,7 +49,7 @@
 
     .detail {
       background-color: #fafafa;
-      max-width: 540px;
+      max-width: @photo-width;
       .box-shadow(0 1px 2px rgba(0,0,0,.04));
       > .text {
         padding: 5px 10px;
@@ -85,7 +84,7 @@
             height: 100%;
             width: 48px;
             height: 40px;
-            background: url('../../images/feed-assets.png') no-repeat;
+            background: url('../../images/photo-assets.png') no-repeat;
             background-size: 100px 1000px;
           }
           .btn-like {
